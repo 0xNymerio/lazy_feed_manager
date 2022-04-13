@@ -1,0 +1,3 @@
+https://secureupdates.checkpoint.com/IP-list/TOR.txt
+https://www.dan.me.uk/torlist/
+

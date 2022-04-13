@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Threat Intell - Feeds Manager</title>
+  </head>
+  <body> 
+    <style>
+      body {
+        background: rgb(76,70,193);
+        color: rgb(236,233,245);
+      }
+
+      h1 {
+        color: rgb(23,21,20);
+        margin-top: 0px;
+        margin-bottom: 0;
+        
+      }
+
+      h2 {
+        color: rgb(23,21,20);
+        margin-top: 0;
+        margin-bottom: 0;
+        letter-spacing: -1px;
+        font-style: italic;
+      }
+
+      h4 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      .container {
+        width: 900px;
+        margin: 0 auto;
+      }
+
+      .intro {
+        text-align: center;
+      }
+
+      .logs{
+        text-align: center;
+        height: 270px;
+        width: px auto;
+        
+      }
+
+      .nymsec-logo {
+        width: 250px;
+        margin: 30px 30x 0px 30px;
+      }
+
+      .foot-note{
+        background-color: rgb(23,21,20);
+        color: rgb(236,233,245);
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+      }
+
+      .disabled-link{    
+        color: #ECE9F5;
+      }
+
+      table.ioc-table {
+        border: 1px solid #ECE9F5;
+        width: 500px;
+        text-align: center;
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      table.ioc-table td, table.ioc-table th {
+        border: 1px solid #000000;
+        padding: 3px 2px;
+      }
+      table.ioc-table tbody td {
+        font-size: 15px;
+        color: #ECE9F5;
+        background-color: #746c7c;
+      }
+
+      table.ioc-table thead th {
+        font-size: 15px;
+        font-weight: bold;
+        color: #ECE9F5;
+      }
+      table.ioc-table tfoot td {
+        font-size: 14px;
+      }
+      table.ioc-table tfoot .links {
+        text-align: right;
+      }
+      table.ioc-table tfoot .links a{
+        display: inline-block;
+        background: #171514;
+        color: #FFFFFF;
+        padding: 2px 8px;
+        border-radius: 5px;
+      }
+
+      tr.background-table{
+        background: #171514;
+      }
+
+      th.background-table{
+        background: #171514;
+      }
+    </style >
+    
+    <div class="container">
+      <div class="intro">
+        <img src="nymsechouse_logo.png" alt="NymSecHouse" class="nymsec-logo"> 
+        <h1>Lazy Feed Manager</h1>
+        <h2>For lazy analysts :)</h2>       
+      </div>
+      <h4>The Lazy Feed manage is a facilitator for you to start monitoring IOCs of IPs and Hashes in your environment and finally complete a step in <a href="https://www.sans.org/tools/the-pyramid-of-pain/" class="disabled-link">The Pyramid of Pain</a>. The intention is only to simplify and make it easier for you to integrate the feeds to your firewall, WAF, SIEM or whatever else you want to use to consume these materials. There are some vendors that have complications to feed their bases when we talk about IPV4 and IPV6, so I separated them for each endpoint and I did the same with the types of hashes algorithms. I hope that today you can monitor or correlate based on the feeds that are active, enjoy!</h4>
+
+      <div class="logs">
+        <object data="log.txt" type="text/plain" width="400" height="300"></object>
+      </div>
+
+    </div>
+    <h4><center>Endpoints to GET:</center></h4>
+    <table class="ioc-table">
+      
+      <tbody>
+        <tr class="background-table">
+          <th rowspan="2"><a href="http://localhost/log.txt" target="blank" class="disabled-link">Log</a></th>   
+          <th><a href="http://localhost/ip_all.txt" target="blank" class="disabled-link">All IPs</a></th>
+          <th><a href="http://localhost/all_tor.txt" target="blank" class="disabled-link">All Tor Ips</a></th>
+          <th><a href="http://localhost/all_hashes.txt"  target="blank" class="disabled-link">All Hashes</a></th>
+        </tr>
+
+        <tr>
+          <td ><a href="http://localhost/ipv4.txt" target="blank" class="disabled-link">Only IPv4</a></td>
+          <td><a href="http://localhost/torIpv4.txt"  target="blank" class="disabled-link">Only Tor IPv4</a></td>
+          <td><a href="http://localhost/sha256.txt"  target="blank"class="disabled-link">Only SHA256 Hashes</a></td>
+        </tr>
+
+        <tr>
+          <th rowspan="2" class="background-table"><a href="http://localhost/python.txt" target="blank" class="disabled-link">Python Log</a></th>
+          <td ><a href="http://localhost/ipv6.txt"  target="blank" class="disabled-link">Only IPv6</a></td>
+          <td><a href="http://localhost/torIpv6.txt"  target="blank"class="disabled-link">Only Tor IPv6</a></td>
+          <td><a href="http://localhost/sha1.txt" target="blank" class="disabled-link">Only SHA1 Hashes</a></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">-</td>
+          <td><a href="http://localhost/md5.txt" target="blank" class="disabled-link">Only MD5 Hashes</a></td>
+        </tr>
+
+      </tbody>
+      </tr>
+    </table>
+
+    <div class="foot-note">
+      <h4>by 0xNymerio</h4>
+    </div> 
+  </body>
+</html>
+
+
